@@ -1,6 +1,5 @@
 import express from "express";
-// import path from "path";
-const path=require('path');
+import path from "path";
 
 const Router = express.Router();
 
