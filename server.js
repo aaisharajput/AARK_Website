@@ -8,9 +8,9 @@ import {Message} from "./Routes/Message.js";
 
 const app = express();
 const port =process.env.PORT || 3000;
-app.use(express.static(path.join(__dirname, 'media')));
+// app.use(express.static(path.join(__dirname, 'media')));
 
-// app.use(express.static('./media'));
+app.use(express.static('./media'));
 app.use(express.static('./'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
