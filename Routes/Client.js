@@ -11,4 +11,4 @@ Router.get('*', (req, res) => {
   res.sendFile(resolve(__dirname, '../','View', 'dist', 'index.html'));
 });
 
-export { Router as NOTFOUND };
+export { Router as Client };

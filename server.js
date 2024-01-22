@@ -5,7 +5,7 @@ import express from "express";
 import cors from 'cors';
 import {IndexRoutes} from "./Routes/IndexRoutes.js";
 import {Message} from "./Routes/Message.js";
-import {NOTFOUND} from "./Routes/NotFound.js";
+import {Client} from "./Routes/Client.js";
 
 const app = express();
 const port =process.env.PORT || 3000;
@@ -50,7 +50,7 @@ app.use(handleCorsError);
 
 app.use('/',Message);
 app.use('/User',IndexRoutes);
-app.use('*',NOTFOUND);
+app.use('*',Client);
 // console.log(app.get('env'))
 // console.log(process.env.PORT)
 
