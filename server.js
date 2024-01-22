@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 // app.use(cors());
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:3000'];
 const corsOptions = {
     origin: function (origin, callback) {
         // Check if the origin is allowed or if it's a same-origin request (null)
