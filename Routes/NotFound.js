@@ -8,7 +8,7 @@ const __dirname = dirname(__filename);
 const Router = express.Router();
 
 Router.get('*', (req, res) => {
-  res.sendFile(resolve(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(resolve(__dirname, '../','View', 'dist', 'index.html'));
 });
 
 export { Router as NOTFOUND };

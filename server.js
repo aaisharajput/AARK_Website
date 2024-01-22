@@ -15,7 +15,7 @@ app.use(express.static('./media'));
 app.use(express.static('./'));
 
 // production script
-app.use(express.static('./View/build'));
+app.use(express.static('./View/dist'));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
