@@ -11,7 +11,7 @@ export default function ContactFormLayout() {
       <div className="row m-0 mb-2 mt-5">
 
         <div className={`col-md-6 mt-4 ${Style.ContactImage}`} style={{ objectFit: "cover" }}>
-          <img src={GetRoute('/Contact.jpg')} alt="" />
+          <img src={GetRoute('/contact.jpg')} alt="" />
           {/* <video autoPlay muted playsInline preload="metadata" className={`mt-4 ${Style.video}`} src={GetRoute('/ContactUS.mp4')} alt="Contact Us" /> */}
         </div>
         <div className="col-md-6  mt-5">
