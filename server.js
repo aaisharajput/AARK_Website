@@ -11,6 +11,7 @@ const app = express();
 const port =process.env.PORT || 3000;
 // app.use(express.static(path.join(__dirname, 'media')));
 
+app.use(express.static('./media/timeline'));
 app.use(express.static('./media'));
 app.use(express.static('./'));
 
