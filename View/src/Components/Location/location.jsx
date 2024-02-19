@@ -8,11 +8,11 @@ export default function location({heading,para}) {
     <>
           <div className="location mb-5">
       <div className="container">
-        <div className="row justify-content-center mb-5">
+        <div className="row justify-content-center mb-3">
           <div className="col-12 col-lg-10">
-            <div className={`text-center ${locationcss.contactcon} ${aboutcss.title}`}>
-              <h2 className='fw-bold'> {heading}</h2>
-              <p>{para}</p>
+            <div className={`text-center mb-5 ${locationcss.contactcon}`}>
+              <h2 className='title'> {heading}</h2>
+              <p className='singlePara text-center'>{para}</p>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import styles from "./style.module.css";
 import GetRoute from "../../../Container/server";
 import { Link } from "react-router-dom";
 
-export default function ServiceCard({ content,color }) {
+export default function ServiceCard({ content }) {
   return (
     <div className="row pt-5">
       <ReactOwlCarousel
@@ -24,10 +24,10 @@ export default function ServiceCard({ content,color }) {
         }}
         navText={[
           `<button class="carousel-control-prev ${styles.leftBtn}" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <i class="fa fa-angle-left ${styles.arrow}" style="color:${color}"></i>
+        <i class="fa fa-angle-left ${styles.arrow}" style="color:#fff"></i>
         </button>`,
           `<button class="carousel-control-next ${styles.rightBtn}" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <i class="fa fa-angle-right ${styles.arrow}" style="color:${color}"></i>
+        <i class="fa fa-angle-right ${styles.arrow}" style="color:#fff"></i>
         </button>`,
         ]}
         dots={true}
@@ -45,11 +45,11 @@ export default function ServiceCard({ content,color }) {
               <div className={styles.serviceIcon}>
                 <img src={GetRoute(data.icon)} />
               </div>
-              <h4 className={`text-center py-4 ${styles.title}`}>
+              <h4 className={`text-center py-4 cardTitle ${styles.title}`}>
                 {data.title}
               </h4>
               <Link to={data.link}>
-                <button className={`btn ${styles.learnBtn}`}>Learn More</button>
+                <button className={`btn learnMoreBtn`}>Learn More</button>
               </Link>
             </div>
           </div>

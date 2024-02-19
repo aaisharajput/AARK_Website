@@ -1,6 +1,6 @@
 import ServiceCard from "./serviceCard"
 
-export default function Offers({color}) {
+export default function Offers() {
 
   const content = [
     {title: "Software Product Engineering",src: "/service-box-image-1.jpg",icon:"/icon1.png",link:"/service/software-product-engineering"},
@@ -11,6 +11,6 @@ export default function Offers({color}) {
   ];
 
   return (
-      <ServiceCard content={content} color={color}/>
+      <ServiceCard content={content}/>
   )
 }

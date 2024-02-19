@@ -8,9 +8,11 @@ export default function Software() {
       <>
       <Video  videoSource={GetRoute('/software-product-engineering.mp4')} heading=" Software Product Engineering" />
       
-      <div className="container py-5">
+      <div >
         <Intro/>
+        <div className="container pb-5">
         <SoftwareService />
+        </div>
       </div>
      
       </>

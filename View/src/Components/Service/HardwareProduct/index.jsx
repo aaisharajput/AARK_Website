@@ -7,9 +7,11 @@ export default function Hardware() {
     <>
     <Video videoSource={GetRoute('/hardware-product-engineering.mp4')} heading="Hardware Product Engineering" />
 
-    <div className="container py-5">
+    <div>
       <Intro/>
+      <div className="container pb-5">
       <HardwareService/>
+      </div>
     </div>
     </>
   );

@@ -1,37 +1,27 @@
-/* header */
+/* nav */
 
 .nav {
-  background-color: transparent;
+  background: linear-gradient(180deg, black, transparent);
+  padding: 0 0;
 }
 
-.navScrolled {
-  background-color: #1f2357;
-}
-
-
-@media (max-width: 990px) {
-  .nav {
-    background-color: #1f2357;
-  }
-
-  .navScrolled {
-    background-color: #1f2357; /* You can adjust this if needed */
-  }
-}
-
-
-.dropArrow::after {
-  display: none;
-}
-
-.navLink,
-.navLink:hover {
+/* nav link */
+.navLink {
   color: #fff;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  padding-left:10px;
+  margin-left: 10px;
 }
 
-.customDropdown .dropdownMenu {
-  display: block;
+.navLink:hover{
+color: #498daf;
+}
+
+
+/* .customDropdown .dropdownMenu {
+  display: hidden;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -40,21 +30,53 @@
 }
 
 .customDropdown:hover .dropdownMenu {
+  background-color: #fff;;
+  display:block;
   max-height: none;
-  opacity: 1;
+  opacity:1;
   transform: translateY(0);
+} */
+
+/* dropdown icon */
+:global(.dropdown-toggle::after) {
+ color:#fff
 }
 
-.Icon {
-  color: white;
-  font-size: 2.5rem;
+/* dropdown item box */
+:global(.dropdown-menu){
+  background-color: transparent;
+  border: none;
 }
 
-.btn:focus {
-  border: 0;
-  box-shadow: none;
+/* dropdown item container */
+.dropdownMenu{
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
+/* menu button */
+.NavbarToggle{
+  background-color: #fff;
+}
+/* dropdown card */
+.cardHover:hover .titleH5{
+  transition: transform 0.25s ease-in-out;
+  transform: scale(1.06);
+  color:#498daf;
+}
+
+.cardHover:hover .titleH6{
+
+  transition: transform 0.25s ease-in-out;
+  transform: scale(1.06);
+  color:#498daf;
+}
+.dropdownService{
+  width:515px;
+}
+.dropdownResource,.dropdownCompany{
+  width:430px;
+}
 
 
 /* search */
@@ -62,14 +84,50 @@
 
 .icon {
   font-size: 25px;
+  cursor: pointer;
 }
 
-.searchButton {
-  background: none;
-  border: none;
+.brand{
+ width: 220px;   
 }
 
-.input {
-  height: 35px;
+@media screen and (max-width:1135px) {
+  .dropdownResource,.dropdownService{
+    margin-left: -80px;
+  }
 }
 
+@media screen and (max-width:992px) {
+
+  .dropdownResource,.dropdownCompany,.dropdownService{
+    margin-left: 0;
+  }
+
+  .nav {
+    background:#002233;
+  }
+  
+
+}
+
+@media screen and (max-width:767px) {
+  .dropdownResource,.dropdownCompany,.dropdownService{
+    width:330px;
+    margin-left: 0;
+  }
+
+  .brand{
+    width: 180px;
+  }
+}
+
+@media screen and (max-width:362px) {
+  .dropdownResource,.dropdownCompany,.dropdownService{
+    width:230px;
+    margin-left: 0;
+  }
+
+  .brand{
+    width: 140px;
+  }
+}

@@ -15,7 +15,7 @@ export default function Video({videosrc,title}) {
         <div className={Videocss.breadcumbBannerCon}>
           <div className="container">
             <div className={Videocss.mainBannerCon}>
-              <h2>{title}</h2>
+              <h2 className="videoTitle">{title}</h2>
             </div>
             <div className={css.bannershape}>
               <img src={GetRoute("/shape.png")} alt="" />

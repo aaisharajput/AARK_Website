@@ -1,0 +1,94 @@
+
+.cardContainer {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin: 16px;
+    color: white;
+    
+  }
+  .cardContainer:hover{
+    transform: scale(1.01);
+    background-color: #003450;
+  }
+  .imageContainer {
+    /* flex: 1; */
+    margin-right: 16px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+ 
+  
+  .heading {
+    /* font-size: 22px;
+    font-weight: bold; */
+    margin-bottom: 8px;
+  }
+  
+  .cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    /* font-size: 14px; */
+    padding-right: 10px;
+    text-transform: uppercase;
+  }
+  
+  .cta i {
+    color: #ffffff;
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover i {
+    transform: translateX(0);
+  }
+  
+  .cta:active i{
+    transform: scale(0.9);
+  }
+  
+  .hover {
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+  }
+  
+  .hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* @media only screen and (max-width : 360px ){
+    .cardContainer p{
+      font-size: 18px !important;
+    }
+    .cardContainer h2{
+      font-size: 20px !important;
+      padding-bottom: 10px;
+    }
+  } */

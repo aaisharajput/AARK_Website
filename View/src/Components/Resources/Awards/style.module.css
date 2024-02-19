@@ -1,0 +1,9 @@
+.Card:hover{
+    background-color: #e3e3e3;
+    transform: scale(1.05);
+}
+.date {
+    font-size: 18px;
+    color: #6a6969;
+  }
+  

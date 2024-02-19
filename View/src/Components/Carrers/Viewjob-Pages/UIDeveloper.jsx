@@ -48,7 +48,7 @@ export default function UIDeveloper() {
     <>
       <Video videosrc={GetRoute("/about-us.mp4")} title="Sr. UI Developer" />
       <div className={`m-5 ${css.content}`}>
-        <h1 className=" mb-3">Sr. UI Developer <ApplyState><SweetAlertForm/></ApplyState></h1> 
+        <h1 className=" mb-3 title">Sr. UI Developer <ApplyState><SweetAlertForm/></ApplyState></h1> 
         <Roles roleItems={UIDeveloperRoles} />
         <Requirements reqItems={UIDeveloperRequirements} />
         <ApplyState><SweetAlertForm/></ApplyState>

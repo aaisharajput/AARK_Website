@@ -10,20 +10,20 @@ function Career() {
       <div>
         <Video videoSource={GetRoute("/careers.mp4")} heading="Careers" />
       </div>
-      <section className="careers-sec my-5">
+      <section className={`careers-sec my-5 ${Css.Career}`}>
         <div className="container">
           <div className={`w-100 ${Css.careertitle}`}>
-            <h6>WE ARE HIRING</h6>
+            <h6 className="boldPara3">WE ARE HIRING</h6>
             <div className={Css.careersemail}>
-              <h3 style={{ color: "black", fontWeight: "30px" }}>
+              <h3 className="subTitle">
                 Join our team
               </h3>
-              <a href="mailto:careers@aarkglobalinc.com" style={{textDecoration:"none"}}>
+              <a href="mailto:careers@aarkglobalinc.com" className="para2" style={{textDecoration:"none",color:"#fff"}}>
                 <i className="fa-solid fa-envelope" style={{color:"#4a569c"}}></i>
                 careers@aarkglobalinc.com
               </a>
             </div>
-            <ul>
+            <ul className="para1">
               <li>Collaborative Environment and Transformational Programs</li>
               <li>Global projects utilizing cutting-edge technologies</li>
               <li>Culture of Teamwork and Rewarding Performance</li>

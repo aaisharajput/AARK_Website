@@ -12,7 +12,7 @@ export default function SoftwareService() {
     By creating variety in test capacity, AARK Global assists clients in ensuring the quality of their products.` },
     { title: "Product Sustenance", src: "/cognitive-img-2-scaled.jpg",icon:"/icon1.png",description:`Our active product support services provide maintenance engineering services that invariably prolong the product lifecycle and 
     maintain product margin in addition to technical support at L1 through L4 levels.` },
-    { title: "Re-Engineering/Modernization", src: "/slider-btn-img-4.png",icon:"/icon2.png",description:` It is critical to remain competitive in the market. AARK Global specializes in identifying out-of-date platforms and technology and re-engineering it to meet market demands.` }
+    { title: "Re-Engineering/ Modernization", src: "/slider-btn-img-4.png",icon:"/icon2.png",description:` It is critical to remain competitive in the market. AARK Global specializes in identifying out-of-date platforms and technology and re-engineering it to meet market demands.` }
   ];
   
   return (

@@ -8,9 +8,12 @@ export default function Cognitive() {
       <>
       <Video videoSource={GetRoute('/cognitive-solutions.mp4')} heading="Cognitive Solutions" />
 
-    <div className="container py-5">
+    <div >
      <Intro/>
+     <div className="container pb-5">
       <CognitiveService/>
+
+     </div>
     </div>
       </>
     )

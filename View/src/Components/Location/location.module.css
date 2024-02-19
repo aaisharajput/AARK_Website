@@ -5,9 +5,7 @@
     height: 100%;
     justify-content: center;
 }
-.location .title h2 {
-    color: #000 !important;
-}
+
 .cardhover a img {
     width: 100%;
     height: 280px;
@@ -58,3 +56,6 @@
   
   
 
+  .title h2{
+    font-size: 20px;
+  }

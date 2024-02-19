@@ -1,18 +1,18 @@
 .breadcumb {
-    /* margin-top: 0;
+    margin-top: 0;
     position: relative;
     padding-right: -15px;
     padding-bottom: 0px;
     padding-left: 0px;
     background-size: cover;
-    background-position: center center; */
+    background-position: center center;
+}
+.videobanner{
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
 }
 
-.videobanner{
-    /* overflow: hidden;
-    position: relative;
-    isolation: isolate; */
-}
 
 .videobanner img {
 
@@ -56,7 +56,9 @@
     font-family: "Open Sans", sans-serif !important;
     text-transform: capitalize;
 }
-
+.btns{
+    margin-top: 3rem;
+}
 .btn{
     width: 142px;
     height: 40px;
@@ -90,14 +92,25 @@
   }
 
 
-@media only screen and (max-width : 800px ){ 
+@media only screen and (max-width : 718px ){ 
     .mainBannerCon h2 {
-        font-size: 35px;
+        font-size: 20px;
+        padding-left: 23px;
     }
 
     .videobanner img {
-
         height: 45vh;
     }
+    .btns{
+        margin-top: 1rem;
+    }
+    .btn{
+        width: 100px;
+    }
     
+}
+@media only screen and (max-width : 370px ){ 
+.breadcumbBannerCon .btns{
+    margin-bottom: 13px;
+}
 }

@@ -11,7 +11,7 @@ export default function ContactUs() {
 
       <ContactFormLayout/>
       
-      <Location heading="OUR GLOBAL LOCATONS"/>
+      <Location heading="OUR GLOBAL LOCATIONS"/>
       
     </>
   )

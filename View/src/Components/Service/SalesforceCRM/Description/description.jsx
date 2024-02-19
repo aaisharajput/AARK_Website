@@ -7,7 +7,7 @@ export default function Description({current,src,list}) {
   return (
     <>
       <div className='row'>
-      <h6 className={styles.navigate}><Link to="/service/salesforce-crm" className={styles.link}><i className='fa fa-arrow-left'></i> Salesforce CRM </Link>/ {current}</h6>
+      <h6 className={`${styles.navigate} para2`}><Link to="/service/salesforce-crm" className={styles.link}><i className='fa fa-arrow-left'></i> Salesforce CRM </Link>/ {current}</h6>
       </div>
 
       <div className='row'>
@@ -15,7 +15,7 @@ export default function Description({current,src,list}) {
           <img className={styles.image} src={GetRoute(src)}></img>
         </div>
         <div className='col-12 col-md-6 d-flex  align-items-center'>
-          <ul type="arrow">
+          <ul type="arrow" className='para1'>
             {
               list.map((data,i)=><li className={styles.list} key={i}>{data}</li>)
             }

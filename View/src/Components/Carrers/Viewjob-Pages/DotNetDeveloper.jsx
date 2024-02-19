@@ -39,7 +39,7 @@ export default function DotNetDeveloper() {
     <>
       <Video videosrc={GetRoute("/about-us.mp4")} title=".net developer" />
       <div className={`m-5  ${css.content}`}>
-        <h1 className=" mb-3">.Net Developer <ApplyState><SweetAlertForm/></ApplyState></h1>
+        <h1 className=" mb-3 title">.Net Developer <ApplyState><SweetAlertForm/></ApplyState></h1>
         <Roles roleItems={DotNetDeveloperRoles} />
         <Requirements reqItems={DotNetDeveloperRequirements} />
         <ApplyState><SweetAlertForm/></ApplyState>

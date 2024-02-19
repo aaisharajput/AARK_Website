@@ -14,20 +14,22 @@ export default function Intro() {
 
 
   return (
+    <div style={{backgroundColor:"#fff"}} className={styles.border}>
+    <div className="container py-5 text-black">
     <div className="row align-items-center">
       <div className="col-12 col-md-6">
         <img src={GetRoute('/service-box-image-4.jpg')} width="100%" />
       </div>
       <div className="col-12 col-md-6 ">
-        <p className={`${styles.organizations} pt-4`}>
+        <p className={`${styles.organizations} pt-4 para1`}>
           {para1}
         </p>
       </div>
-      <div className="col-12 col-md-12 pt-3">
+      <div className="col-12 col-md-12 pt-3 ">
         <p className={styles.organizations}>
-        <span className={styles.para2}><br/>Our offerings traverse across the entire Salesforce product eco-system including the following:</span>
+        <span className="singlePara"><br/>Our offerings traverse across the entire Salesforce product eco-system including the following:</span>
         </p>
-        <ul className={styles.ul}>
+        <ul className={`${styles.ul} para1`}>
         <li>Sales Cloud, Marketing Cloud, Revenue Cloud and Commerce Cloud</li>
         <li>Service Cloud, Experience Cloud, Field Service and Slack</li>
         <li>MuleSoft</li>
@@ -36,5 +38,8 @@ export default function Intro() {
         </ul>
       </div>
     </div>
+    </div>
+    </div>
+    
   );
 }

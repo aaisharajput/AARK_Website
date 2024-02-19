@@ -55,7 +55,7 @@ export default function LeadMechanicalEngineer() {
     <>
       <Video videosrc={GetRoute("/about-us.mp4")} title="Lead Mechanical Engineer" />
       <div className={`m-5 ${css.content}`}>
-        <h1 className=" mb-3">Lead Mechanical Engineer <ApplyState><SweetAlertForm/></ApplyState></h1>
+        <h1 className=" mb-3 title">Lead Mechanical Engineer <ApplyState><SweetAlertForm/></ApplyState></h1>
         <Roles roleItems={LeadMechanicalEngineerRoles} />
         <Requirements reqItems={LeadMechanicalEngineerRequirements} />
         <ApplyState><SweetAlertForm/></ApplyState>

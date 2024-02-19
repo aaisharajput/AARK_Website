@@ -8,9 +8,11 @@ export default function CloudPlatform() {
     <>
     <Video videoSource={GetRoute('/cloud-platform-engineering.mp4')} heading="Cloud Platform Engineering" />
 
-    <div className="container py-5">
+    <div >
      <Intro/>
+     <div className="container pb-5">
       <CloudService/>
+       </div>
     </div>
     </>
   )

@@ -13,7 +13,7 @@ export default function SalesforceService() {
   return (
     <>
       <Title title="SERVICES WE PROVIDE"/>
-      <ServiceCard content={content} color="#1f2357"/>
+      <ServiceCard content={content} />
       </>
   );
   }

@@ -43,8 +43,22 @@
    
 }
 
-.number{
-    font-family: "Open Sans", sans-serif;
-    font-size: 8px;
-    font-weight: 300
+.number input{
+    width: 100% !important;
 }
+
+.compactRecaptcha {
+    display: none;
+  }
+
+  @media only screen and (max-width: 320px) {
+    .compactRecaptcha {
+      display: block;
+    }
+  
+    .normalRecaptcha {
+      display: none;
+    }
+  }
+  
+  

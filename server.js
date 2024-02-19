@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config({path:'./config.env'}); //set path
+dotenv.config({path:'./.env'}); //set path
 
 import express from "express";
 import cors from 'cors';
@@ -10,6 +10,8 @@ import {Client} from "./Routes/Client.js";
 const app = express();
 const port =process.env.PORT || 3000;
 // app.use(express.static(path.join(__dirname, 'media')));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
 
 app.use(express.static('./media/timeline'));
 app.use(express.static('./media'));
@@ -18,8 +20,6 @@ app.use(express.static('./'));
 // production script
 app.use(express.static('./View/dist'));
 
-app.use(express.json());
-app.use(express.urlencoded({extended:true}))
 // app.use(cors());
 
 const allowedOrigins = ['https://aark-website.onrender.com','https://aarkwebsite.azurewebsites.net','http://localhost:3000'];
@@ -49,7 +49,7 @@ const handleCorsError = (err, req, res, next) => {
 app.use(cors(corsOptions));
 app.use(handleCorsError);
 
-app.use('/',Message);
+app.use('/message',Message);
 app.use('/User',IndexRoutes);
 app.use('*',Client);
 // console.log(app.get('env'))

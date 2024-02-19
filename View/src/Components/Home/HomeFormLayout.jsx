@@ -12,10 +12,10 @@ export default function HomeFormLayout() {
         </div>
         <div className="col-md-6 mt-5 mb-3">
         <div>
-      <h1 className="fw-bold text-white text-center" >REQUEST CONSULTATION</h1>
-      <p className="text-white ">Share your toughest business problem with us and allow us to show how we can help.</p>
+      <h1 className="text-white text-center title" >REQUEST CONSULTATION</h1>
+      <p className="text-white text-center singlePara">Share your toughest business problem with us and allow us to show how we can help.</p>
     </div>
-      <ContactState><Form color="text-white"/></ContactState>
+      <ContactState><Form color="#fff"/></ContactState>
     </div>
 </div>
 

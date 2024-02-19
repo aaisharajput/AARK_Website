@@ -40,7 +40,7 @@ export default function PythonDeveloper() {
     <>
       <Video videosrc={GetRoute("/about-us.mp4")} title="Python Developer" />
       <div className={`m-5 ${css.content}`}>
-        <h1 className=" mb-3">Python Developer <ApplyState><SweetAlertForm/></ApplyState></h1>
+        <h1 className=" mb-3 title">Python Developer <ApplyState><SweetAlertForm/></ApplyState></h1>
         <Roles roleItems={PythonDeveloperRoles} />
         <Requirements reqItems={PythonDeveloperRequirements} />
         <ApplyState><SweetAlertForm/></ApplyState>

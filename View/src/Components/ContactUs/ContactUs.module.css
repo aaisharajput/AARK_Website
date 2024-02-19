@@ -1,80 +1,78 @@
-/* .video{
-    border: none;
-    text-decoration: none;
-    width: 100%;
-    height: 87%
-    
-} */
-
-.ContactImage img{
-    margin-left: 40px;
-    width: 90%;
-    height: 85%;
-
+.ContactImage iframe {
+  margin: 0 20px;
+  width: 90%;
+  height: 96%;
 }
 
-
-.Message{
-    width: 97%;
-    padding: 16px 9px;
-    margin: 10px;
+.mail i {
+  margin: 15px;
+  color: #4a569c;
+  text-align: center;
+  line-height: 18px;
 }
 
-.mail i{
-    margin: 15px;
-    color: #4a569c;
-    text-align: center;
-    font-size: 30px;
-    line-height: 18px;
+.mail a {
+  text-decoration: none;
+  margin-top: 10px;
+  color: #ffffff;
 }
 
-.mail a{
-    text-decoration: none;
-    margin-top: 10px;
+.btn {
+  font-size: 14px;
+  padding: 9px 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: none;
 }
 
-.btn{
-    font-size: 14px;
-    padding: 9px 22px;
-    font-weight: 500;
-    border-radius: 30px;
-    border: none;
+.contact {
+  background-color: #4a569c;
+  color: white;
 }
 
-.apply{
-    background-color: #4a569c;
-    color: white;
+.contact:hover {
+  background-color: #4a569c;
+  color: #fff;
 }
 
-.apply:hover{
-    background-color: #4a569c;
-    color: #fff;
+.load {
+  background-color: #4a569c;
+  color: white;
+  padding: 10px 40px;
 }
 
-.load{
-    background-color: #4a569c;
-    color: white;
-    padding:10px 40px;
+.load:hover {
+  background-color: #4a569c;
+  color: white;
+  padding: 10px 40px;
 }
 
-.load:hover{
-    background-color: #4a569c;
-    color: white;
-    padding:10px 40px;
+.number input {
+  width: 100% !important;
 }
 
-.number{
-    font-family: "Open Sans", sans-serif;
-    font-size: 8px;
-    font-weight: 300;
+.ReCaptchaDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.compactRecaptcha {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-.Message {
-    width: 93%;
-    margin: 13px;
-  }
   .ContactImage img {
     margin-left: 18px;
+  }
 }
+
+@media only screen and (max-width: 310px) {
+  .compactRecaptcha {
+    display: block;
+  }
+
+  .normalRecaptcha {
+    display: none;
+  }
 }
+

@@ -6,21 +6,7 @@ import styles from "./card.module.css";
 import GetRoute from "../../../Container/server";
 
 export default function CarouselCard({content}) {
-  const [isFirstItem, setIsFirstItem] = useState(true);
-  const [isLastItem, setIsLastItem] = useState(false);
 
-  const handleInitialized = () => {
-    // Check if the carousel is at the first item initially
-    setIsFirstItem(true);
-    // Check if the carousel is at the last item initially
-    setIsLastItem(false);
-  };
-
-  const handleTranslated = (event) => {
-    // Check if the current item is the first or last
-    setIsFirstItem(event.page.index === 0);
-    setIsLastItem(event.page.index === event.page.count - 1);
-  };
   return (
     <div className="row pt-5">
       <ReactOwlCarousel
@@ -38,14 +24,12 @@ export default function CarouselCard({content}) {
           1400: { items: 3 },
         }}
         navText={[`<button class="carousel-control-prev ${styles.leftBtn}" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <i class="fa fa-angle-left ${styles.arrow}"></i>
+        <i class="fa fa-angle-left ${styles.arrow}" style="color:#fff"></i>
         </button>`,`<button class="carousel-control-next ${styles.rightBtn}" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <i class="fa fa-angle-right ${styles.arrow}"></i>
+        <i class="fa fa-angle-right ${styles.arrow}" style="color:#fff"></i>
         </button>`]}
         dots={true}
         className="service-slider-two owl-carousel"
-        onInitialized={handleInitialized}
-        onTranslated={handleTranslated}
       >
         {content.map((data,i) => (
           <div key={i} className={`single-service-wrap bg-white ${styles.card}`}>
@@ -56,7 +40,7 @@ export default function CarouselCard({content}) {
             <div className={styles.serviceIcon}>
             <img src={GetRoute(data.icon)}/>
             </div>
-            <h4 className={`text-center pt-5 px-2 ${styles.title}`}>{data.title}</h4>
+            <h4 className={`text-center pt-5 px-2 cardTitle`}>{data.title}</h4>
             </div>
           </div>
         ))}

@@ -44,7 +44,7 @@ export default function JavaDeveloper() {
     <>
       <Video videosrc={GetRoute("/about-us.mp4")} title="Java Developer" />
       <div className={`m-5  ${css.content}`}>
-        <h1 className=" mb-3">Java Developer <ApplyState><SweetAlertForm/></ApplyState></h1>
+        <h1 className=" mb-3 title">Java Developer <ApplyState><SweetAlertForm/></ApplyState></h1>
         <Roles roleItems={JavaDeveloperRoles} />
         <Requirements reqItems={JavaDeveloperRequirements} />
         <ApplyState><SweetAlertForm/></ApplyState>

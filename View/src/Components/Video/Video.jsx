@@ -12,7 +12,7 @@ export default function Video({ videoSource, heading }) {
         <div className={Videocss.breadcumbBannerCon}>
           <div className="container">
             <div className={Videocss.mainBannerCon}>
-              <h2>{heading}</h2>
+              <h2 className="videoTitle">{heading}</h2>
             </div>
           </div>
         </div>

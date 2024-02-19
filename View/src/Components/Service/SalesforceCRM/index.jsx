@@ -8,9 +8,12 @@ export default function Salesforce() {
       <>
       <Video videoSource={GetRoute('/salesforce-crm.mp4')} heading="Salesforce CRM" />
 
-    <div className="container py-5">
+    <div >
      <Intro/>
+     <div className="container pb-5">
+
       <SalesforceService />
+     </div>
     </div>
       </>
     )

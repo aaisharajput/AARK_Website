@@ -1,130 +1,225 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import GetRoute from '../../Container/server';
 import styles from "./style.module.css";
-import { Icon } from "@iconify/react";
-import GetRoute from "../../Container/server";
 import { Link } from "react-router-dom";
- 
-export default function Navbar({ bgColor,value,handleChange }) {
+
+function NavbarMenu({ value, handleChange }) {
   return (
-    <nav
-      className={`navbar navbar-expand-lg py-1 fixed-top ${
-        bgColor ? styles.navScrolled : styles.nav
-      }`}
-    >
-      <div className="container p-0">
-        <a className="navbar-brand p-0" href="/">
-          <img
-            src={GetRoute("/newupdated.png")}
-            alt=""
-            width="220"
-            className="d-inline-block align-text-top"
-          />
-        </a>
-        <button
-          className={`navbar-toggler mx-3 ${styles.btn}`}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
-        >
-          <Icon icon="bx:menu-alt-right" className={styles.Icon} />
-        </button>
-        <div
-          className="collapse navbar-collapse"
-          id="collapsibleNavbar"
-        >
-          <ul className="navbar-nav">
-            <li className="nav-item px-3">
-              <a className={`nav-link ${styles.navLink}`} href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item px-3">
-              <a className={`nav-link ${styles.navLink}`} href="/about">
-                About Us
-              </a>
-            </li>
-            <li className={`nav-item dropdown px-3 ${styles.customDropdown}`}>
-              <a
-                className={`nav-link ${styles.navLink} dropdown-toggle ${styles.dropArrow}`}
-                href="/service"
-                id="navbarDropdownMenuLink"
-                role="button"
-                aria-expanded="false"
-              >
-                Service Offerings
-              </a>
-              <ul
-                className={`dropdown-menu ${styles.dropdownMenu} `}
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a
-                    className="dropdown-item"
-                    href="/service/software-product-engineering"
-                  >
-                    Software Product Engineering
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item"
-                    href="/service/hardware-product-engineering"
-                  >
-                    Hardware Product Engineering
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item"
-                    href="/service/cloud-platform-engineering"
-                  >
-                    Cloud Platform Engineering
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/service/cognitive-solution">
-                    Cognitive Solutions
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/service/salesforce-crm">
-                    Salesforce CRM
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item px-3">
-              <a className={`nav-link ${styles.navLink}`} href="/engagement">
-                Engagement Model
-              </a>
-            </li>
-            <li className="nav-item px-3">
-              <a className={`nav-link ${styles.navLink}`} href="/careers">
-                Careers
-              </a>
-            </li>
-            <li className="nav-item px-3">
-              <a className={`nav-link ${styles.navLink}`} href="/contact">
-                Contact Us
-              </a>
-            </li>
-          </ul>
+    <Navbar className={`${styles.nav}`} fixed="top" expand="lg">
+    <Container>
+    <Navbar.Brand href="/" className='py-2'>
+    <img
+      src={GetRoute("/newupdated.png")}
+      className={`d-inline-block align-top ${styles.brand}`}
+      alt="React Bootstrap logo"
+    />
+  </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles.NavbarToggle} />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="m-auto">
+          <Nav.Link className={styles.navLink} href="/">Home</Nav.Link>
+
+          <NavDropdown title={<span className={`${styles.navLink}`}>Company</span>} id="basic-nav-dropdown">
+          <div className={`${styles.dropdownMenu} ${styles.dropdownCompany} container`}>
+            <div className="row p-2 ">
+          <div className="col-12 col-md-6">
+          <a href="/about">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h5 className={`card-title ${styles.titleH5}`}>About</h5>
+                <h6 className={styles.titleH6}>Know about our company</h6>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div className="col-12 col-md-6">
+            <a href="/about/culture" >
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h5 className={`card-title ${styles.titleH5}`}>Culture</h5>
+                <h6 className={styles.titleH6}>Dive into Our Corporate Vibe</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
+          <div className="col-12 col-md-6">
+            <a href="/engagement">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h5 className={`card-title ${styles.titleH5}`}>Engagement</h5>
+                <h6 className={styles.titleH6}>Foster Active Participation</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
+          </div>
+        </div>
+          </NavDropdown>
+
+          <NavDropdown title={<span className={`${styles.navLink}`}>Service</span>} id="basic-nav-dropdown">
+          <div className={`${styles.dropdownMenu} ${styles.dropdownService} container`}>
+          <div className='row'>
+          <div className="col-12">
+          <a href="/service">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body pb-0 mb-0">
+                <h5 className={`card-title ${styles.titleH5}`}> Services</h5>
+              </div>
+            </div>
+          </a>
+          </div>
           
+          </div>
+          <div className="row pb-2 ">
+          <div className="col-12 col-md-4">
+          <a href="/service/software-product-engineering">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+                <h6 className={`card-title ${styles.titleH6}`}> Software Product Engineering</h6>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div className="col-12 col-md-4">
+            <a href="/service/hardware-product-engineering" >
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h6 className={`card-title ${styles.titleH5}`}>Hardware Product Engineering</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
+          <div className="col-12 col-md-4">
+            <a href="/service/cloud-platform-engineering">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h6 className={`card-title ${styles.titleH5}`}>Cloud Platform Engineering</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
+          <div className="col-12 col-md-4">
+            <a href="/service/cognitive-solution">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h6 className={`card-title ${styles.titleH5}`}>Cognitive Solutions</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
+          <div className="col-12 col-md-4">
+            <a href="/service/salesforce-crm">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h6 className={`card-title ${styles.titleH5}`}>Salesforce CRM</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
+          <div className="col-12 col-md-4">
+            <a href="/service/SemiConductor">
+            <div className={`card border-0 ${styles.cardHover}`}>
+              <div className="card-body">
+              
+              
+                <h6 className={`card-title ${styles.titleH5}`}>SemiConductor</h6>
+              </div>
+            </div>
+              
+            </a>
+          </div>
         </div>
-        <div
-          className="collapse navbar-collapse"
-          id="collapsibleNavbar"
-        >
-      <div className="d-flex">
-        <input className= {`form-control me-2 mt-1 ${styles.input}`} value={value} onChange={handleChange} type="text" placeholder="Search" />
-        <button className={styles.searchButton}>
-        <Link to={value==""?"#":`/search/${value}`}><i className= {`fa fa-search text-white mt-2  ${styles.icon}`}></i></Link>
-        </button>
         </div>
-      
+          </NavDropdown>
+
+          <NavDropdown title={<span className={`${styles.navLink}`}>Resources</span>} id="basic-nav-dropdown">
+          <div className={`${styles.dropdownMenu} ${styles.dropdownResource} container`}>
+          <div className="row p-2 ">
+                <div className="col-12 col-md-6">
+                <a href="/resources/blogs">
+                  <div className={`card border-0 ${styles.cardHover}`}>
+                    <div className="card-body">
+                    
+                    
+                      <h5 className={`card-title ${styles.titleH5}`}>Blogs</h5>
+                      <h6 className={styles.titleH6}>Discover Blog Insights</h6>
+                    </div>
+                  </div>
+                </a>
+                </div>
+                <div className="col-12 col-md-6">
+                  <a href="/resources/press-releases" >
+                  <div className={`card border-0 ${styles.cardHover}`}>
+                    <div className="card-body">
+                    
+                    
+                      <h5 className={`card-title ${styles.titleH5}`}>Press Releases</h5>
+                      <h6 className={styles.titleH6}>Stay updated with our latest news</h6>
+                    </div>
+                  </div>
+                    
+                  </a>
+                </div>
+               {/* <div className="col-12 col-md-6">
+                  <a href="/resources/awards">
+                  <div className={`card border-0 ${styles.cardHover}`}>
+                    <div className="card-body">
+                    
+                    
+                      <h5 className={`card-title ${styles.titleH5}`}>Awards</h5>
+                      <h6 className={styles.titleH6}>Know about our company</h6>
+                    </div>
+                  </div>
+                    
+                  </a>
+                </div>
+      */}
+              </div>
         </div>
-       
+          </NavDropdown>
+
+          <Nav.Link className={styles.navLink} href="/careers">Careers</Nav.Link>
+          <Nav.Link className={styles.navLink} href="/contact">Contact</Nav.Link>
+        </Nav>
+        <div className="d-flex py-3">
+        <Form.Control
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+          value={value} onChange={handleChange}
+        />
+        
+              <Link to={value == "" ? "#" : `/search/${value}`}><i className={`fa fa-search text-white mt-2  ${styles.icon}`}></i></Link>
       </div>
-    </nav>
-  );
+      </Navbar.Collapse>
+    </Container>
+  </Navbar> 
+  )
 }
- 
+
+export default NavbarMenu

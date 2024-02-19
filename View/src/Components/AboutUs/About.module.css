@@ -1,24 +1,242 @@
 
 .aboutcon p {
-    color: black;
-    vertical-align: middle;
-    text-align: justify;
     padding-bottom: 9px;
     padding-left: 20px;
     padding-right: 20px;
+    color: #fff;
 }
 
-.title h2 {
-    font-size: 30px;
-    line-height: 1.4;
-    text-align: center;
-}
-b {
-    padding: 5px 0px 10px 30px;
-}
+
 .aboutimg img{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
     width: 100%;
 }
+
+
+
+/*  core values card */
+
+
+.card {
+  width: 300px;
+  height: 200px;
+  /* perspective: 1000px; */
+}
+
+.cardinner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .cardinner {
+  transform: rotateY(180deg);
+}
+
+.cardfront,
+.cardback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cardfront {
+  object-fit: cover;
+   background-color: #fffdff;
+  color: #060404;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #ffffff;
+  border-radius: 10px;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+
+.cardfront img{
+width: 5em;
+}
+
+
+.cardback {
+  background-color: #165651;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #165651;
+  border-radius: 10px;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.cardback ul li{
+list-style:circle;
+font-weight: bold;
+}
+
+.cardKey {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.cardinnerKey {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.cardKey:hover .cardinnerKey {
+  transform: rotateY(180deg);
+}
+.cardKey p{
+  letter-spacing: 0px;
+  word-spacing:0px;
+}
+.cardfrontKey,
+.cardbackKey {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cardfrontKey {
+  object-fit: cover;
+   background-color: #fffdff;
+  color: #060404;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #ffffff;
+  border-radius: 10px;
+  justify-content: center;
+  transform: rotateY(0deg);
+  
+}
+
+
+.cardfrontKey img{
+width: 5em;
+}
+
+
+.cardbackKey {
+  background-color: #165651;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 10px solid #165651;
+  border-radius: 10px;
+  justify-content: center;
+  transform: rotateY(180deg);
+  gap: 20px;
+}
+.occ{
+  text-align: center;
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(65, 201, 255);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  /* font-weight: 600; */
+  transition-duration: .3s;
+  text-align: center;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 175px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+/* faq  */
+ 
+.faqHeading{
+  background: #002233;
+  color: white;
+}
+ 
+.acc{
+  width: 90%;
+  margin: 0 auto;
+}
+ 
+.faqbody{
+  background: #002233;
+  color: #fff;
+}
+ 
+.img img{
+  width: 75%;
+  height: 95%;
+}
+
+
+:global(.accordion-header button){
+  font-weight: bold;
+}
+
 @media only screen and (max-width : 754px ){ 
     
     .aboutcon{

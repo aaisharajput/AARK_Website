@@ -12,16 +12,16 @@ export default function SearchCard({ searchResult,searchText }) {
             <div className='row py-4'>
 
                 {searchResult.length == 0 ? <div className='col-12'>
-                <div className={`career-card d-flex align-items-center ${styles.careercard} `}>
-                    <div className={`career-card__title ${styles.careerCardTitle}`}>No Match Found!!</div>
+                <div className={`d-flex align-items-center ${styles.searchCard}`}>
+                    <div className={`${styles.searchCardTitle}`}>No Match Found!!</div>
                 </div>
             </div>
              : searchResult.map((result, index) => {
 
                 return <div className='col-12' key={index}>
-                        <div className={`career-card ${styles.careercard}`}>
-                            <div className={`career-card__title ${styles.careerCardTitle}`}>{result.title}</div>
-                            <a href={result.url} className={`career-card__link ${styles.careeCardLinkJob}`}>Learn More</a>
+                        <div className={`${styles.searchCard}`}>
+                            <div className={`${styles.searchCardTitle}`}>{result.title}</div>
+                            <a href={result.url} className={`${styles.careeCardLinkJob}`}>Learn More</a>
                         </div>
                     </div>
                 })}

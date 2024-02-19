@@ -1,0 +1,37 @@
+/* Card.module.css */
+.Bg{
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+}
+.card {
+    /* width: 300px; */
+    padding: 20px;
+    margin: 20px 10px;
+    /* border: 1px solid #000000; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .card:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .date {
+    /* font-size: 18px; */
+    color: #6a6969;
+  }
+
+.heading:hover{
+    text-decoration: underline;
+}
+  

@@ -20,7 +20,7 @@ const { VITE_REACT_APP_SITE_KEY } = import.meta.env;
       <div className="modal-content">
   
         <div className="modal-header">
-          <h4 className="modal-title fw-bold">Apply</h4>
+          <h4 className="modal-title fw-bold text-black subTitle3">Apply</h4>
           <button className={`btn ${style.close}`} data-bs-dismiss="modal">X</button>
         </div>
   
@@ -35,7 +35,7 @@ const { VITE_REACT_APP_SITE_KEY } = import.meta.env;
             <input type="email" className={`form-control ${style.formcontrol}`} placeholder="Email*" value={email} onChange={handleChange("email")} />
           </div>
  
-          <div className="col-12  mt-4">
+          <div className="col-12  mt-4 text-black">
           <PhoneInput placeholder="Enter Phone Number" className={style.number} country={"in"} value={phoneNo} onChange={handlePhoneNo("phoneNo")}/>
           </div>
           <div className="col-12  mt-4">
@@ -61,28 +61,33 @@ const { VITE_REACT_APP_SITE_KEY } = import.meta.env;
               <option value="UI Designer">UI Designer</option>
             </select>
           </div>
-          <div  className="col-12  ">
-          <label className="form-label mb-3" htmlFor="customFile" style={{ fontSize:"15px" , fontWeight:700}}>Attach Your CV*</label>
+          <div className="col-12">
+          <label className="form-label mb-3 singlePara text-black" htmlFor="customFile" >Attach Your CV*</label>
           <input type="file" className={`form-control ${style.formcontrol}`} ref={fileInputRef}  onChange={handleFileChange("cv")} />
           </div>
 
+          <div className="col-12 pt-2">
+          <p className='text-black para2' style={{fontWeight:"500"}}>Max. file size: 5 MB. </p>
+          </div>
+          
           <div className="col-12">
           <div className='formGroup d-flex justify-content-center pt-2'>
-          <ReCAPTCHA sitekey={VITE_REACT_APP_SITE_KEY} ref={captchaRef}  />
+            <ReCAPTCHA sitekey={VITE_REACT_APP_SITE_KEY} ref={captchaRef} size="compact" className={style.compactRecaptcha}/> 
+            <ReCAPTCHA sitekey={VITE_REACT_APP_SITE_KEY} ref={captchaRef}  size="normal" className={style.normalRecaptcha}/> 
           </div>
           </div>
          
           
-          <div className= {` col-6 my-2 mb-2 ${style.btn} `} >
+          <div className= {` col-12 col-sm-6 my-2 mb-2 ${style.btn} `} >
           <span style={{ color: "red" }}>
           {validationErrors == "" ? " " : validationErrors}
         </span>
           </div>
 
-          <div className= {` col-6 my-2 mb-2 ${style.btn} d-flex justify-content-between`} >
+          <div className= {` col-12 col-sm-6 my-2 mb-2 ${style.btn} d-flex justify-content-end`} >
 
           {disabled==true?<button className={`btn ${style.load} ${style.btn} buttonload`} disabled={disabled}><i className="fa fa-spinner fa-spin"></i></button>: <button type="submit" className={`btn ${style.apply} ${style.btn}`} disabled={disabled}>Submit</button>}
-          
+          &n;
           <button type="button" className={`btn ${style.btn} ${style.cancel}`} data-bs-dismiss="modal">Cancel</button>
           </div>
 

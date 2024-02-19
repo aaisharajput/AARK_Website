@@ -1,16 +1,12 @@
 /* description */
 
 .link{
-    color:#000;
+    color:#fff;
     text-decoration: none;
-}
-.link:hover{
-    color:#323cd0;
 }
 
 .navigate{
     font-weight: 600;
-    color: #1f2357;
 }
 
 .image{
@@ -19,4 +15,7 @@
 
 .list{
     padding: 5px;
+}
+.image{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
 }

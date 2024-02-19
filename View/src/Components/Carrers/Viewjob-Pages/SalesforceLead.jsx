@@ -49,7 +49,7 @@ export default function SalesforceLead() {
     <>
       <Video videosrc={GetRoute("/about-us.mp4")} title="Salesforce Lead" />
       <div className={`m-5 ${css.content}`}>
-        <h1 className=" mb-3">Salesforce Lead <ApplyState><SweetAlertForm/></ApplyState></h1>
+        <h1 className=" mb-3 title">Salesforce Lead <ApplyState><SweetAlertForm/></ApplyState></h1>
         <Roles roleItems={SalesforceLeadRoles} />
         <Requirements reqItems={SalesforceLeadRequirements} />
         <ApplyState><SweetAlertForm/></ApplyState>

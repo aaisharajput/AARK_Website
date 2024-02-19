@@ -22,9 +22,9 @@ export default function SoftwareCard({content}) {
           1400: { items: 3 },
         }}
         navText={[`<button class="carousel-control-prev ${styles.leftBtn}" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <i class="fa fa-angle-left ${styles.arrow}"></i>
+        <i class="fa fa-angle-left ${styles.arrow}" style="color:#fff"></i>
         </button>`,`<button class="carousel-control-next ${styles.rightBtn}" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <i class="fa fa-angle-right ${styles.arrow}"></i>
+        <i class="fa fa-angle-right ${styles.arrow}" style="color:#fff"></i>
         </button>`]}
         dots={true}
         className="service-slider-two owl-carousel"
@@ -38,8 +38,8 @@ export default function SoftwareCard({content}) {
             <div className={styles.serviceIcon}>
             <img src={GetRoute(data.icon)}/>
             </div>
-            <h4 className={`text-center pt-4 ${styles.title}`}>{data.title}</h4>
-            <p className="p-4">{data.description}</p>
+            <h4 className={`text-center pt-4 pb-0 cardTitle`}>{data.title}</h4>
+            <p className="px-4 para1">{data.description}</p>
             </div>
             
           </div>

@@ -1,6 +1,9 @@
 .Body{
   background-color: black ;
-
+}
+.Body p{
+  letter-spacing: 0px;
+  word-spacing:0px;
 }
   .para{
     text-align: justify;
@@ -14,7 +17,7 @@
 
 
 .card1 {
-  margin: 50px 60px;
+  margin: 50px auto;
   position: relative;
   width: 300px;
   height: 400px;
@@ -79,7 +82,7 @@
 }
 
 .card2 {
-  margin: 50px 60px;
+  margin: 50px auto;
   position: relative;
   width: 300px;
   height: 400px;
@@ -145,7 +148,7 @@
 
 
 .card3 {
-  margin: 50px 60px;
+  margin: 50px auto;
   position: relative;
   width: 300px;
   height: 400px;
@@ -228,6 +231,7 @@
   perspective: 1000px;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .cardContent {
@@ -311,19 +315,21 @@
   font-weight: bold;
 }
 
+.Footer a:hover{
+  color: rgb(0, 4, 255);
+}
+
 
 /* on  video card */
 .breadCard{
-  display: flex;
-  justify-content: end;
-  /* position: absolute;
-  top: 84%;
-  left: 65%;
+  position: absolute;
+  /* top: 84%;
+  left: 65%; */
   right: 0;
   bottom: 0;
   height: max-content;
-  margin: auto;
-  z-index: 99; */
+  margin: 0 10px;
+  z-index: 99;
 }
 
 .yrcard {
@@ -336,12 +342,14 @@
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
+  padding: 1rem;
 }
 
 .yrcard p {
   z-index: 1;
-  color: black;
+  color: white;
   font-size: 20px;
+  font-weight: 400;
 }
 
 .yrcard::before {
@@ -381,30 +389,122 @@
   list-style: none;
 }
 
+/* faq  */
 
 
 
-/* shape divider  */
-
-
-.customShapeDividerBottom1705408108 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-  margin-bottom: 80px;
+:global(.accordion-container .accordion-header button) {
+  background-color: #000; 
+  color: #fff;
 }
 
-.customShapeDividerBottom1705408108 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
+:global(.accordion-container .accordion-header button:hover) {
+  background-color: gray; 
+  color: #fff;
 }
 
-.customShapeDividerBottom1705408108 .shapefill {
-  fill:rgb(255, 48, 255);
+
+/* Add this to set the background color when accordion is expanded */
+:global(.accordion-container .accordion-body) {
+  background-color: #000; 
+  color: #fff;
+}
+
+.img img{
+  width: 90%;
+  height: 95%;
+}
+ 
+.cardPara{
+  font-size: 18px;
+  letter-spacing: 0px;
+  word-spacing:0px;
+}
+@media only screen and (max-width : 718px ){ 
+
+  .yrcard {
+    padding: 0;
+  }
+  .yrcard p{
+    margin-top: 8px;
+    
+  }
+}
+@media only screen and (max-width : 501px ){ 
+
+  .yrcard {
+   width: 300px;
+   margin-right: 164px;
+  }
+  .yrcard p{
+     font-size: 12px;
+   }
+  
+}
+@media only screen and (max-width : 486px ){ 
+
+  .yrcard {
+   margin-right: 154px;
+  }
+
+}
+@media only screen and (max-width : 479px ){ 
+
+  .yrcard {
+   margin-right: 144px;
+  }
+
+}
+@media only screen and (max-width : 460px ){ 
+
+  .yrcard {
+   margin-right: 134px;
+  }
+
+}
+@media only screen and (max-width : 440px ){ 
+
+  .yrcard {
+   margin-right: 114px;
+  }
+
+}
+@media only screen and (max-width : 420px ){ 
+
+  .yrcard {
+   margin-right: 104px;
+  }
+
+}
+@media only screen and (max-width : 400px ){ 
+
+  .yrcard {
+   margin-right: 60px;
+  }
+
+}
+@media only screen and (max-width : 370px ){ 
+
+  .yrcard {
+   margin-right: 0px;
+   font-size: 10px;
+   width: 250px;
+   padding-left: 0.8rem;
+   margin-top: 2px;
+  }
+  .card1,.card2,.card3{
+    width: 232px ;
+    height: 500px ;
+  }
+  .card1:before,.card2:before,.card3:before{
+    width: 244px;
+    height: 520px;
+  }
+}
+@media only screen and (max-width : 322px ){ 
+
+  .card{
+    width:100%;
+    height: 100%;
+  }
 }
