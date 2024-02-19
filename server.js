@@ -48,7 +48,7 @@ const handleCorsError = (err, req, res, next) => {
 
 app.use(cors(corsOptions));
 app.use(handleCorsError);
-
+// sapna
 app.use('/message',Message);
 app.use('/User',IndexRoutes);
 app.use('*',Client);
